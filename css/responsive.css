@@ -96,8 +96,14 @@
   .hero { min-height: 500px; max-height: 700px; }
   .hero__content { padding-left: var(--space-6); }
   .hero__desc { font-size: var(--fs-base); }
-  .hero__btns { flex-direction: column; }
-  .hero__btns .btn { width: 100%; max-width: 280px; }
+  .hero__btns { flex-direction: row; flex-wrap: wrap; gap: var(--space-3); }
+  .hero__btns .btn {
+    width: auto;
+    max-width: none;
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--fs-xs);
+    white-space: nowrap;
+  }
   .hero__scroll-indicator { display: none; }
 
   /* Categories */
@@ -284,5 +290,15 @@
   .team-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
 
-  .hero__btns .btn { max-width: 100%; }
+  .hero__btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__btns .btn {
+    width: 100%;
+    max-width: 240px;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-xs);
+  }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact LUXE. Get in touch with us for support, inquiries, or feedback. We're here to help.">
+  <title>Contact Us — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link active">Contact</a></li></ul></nav><div class="header__actions"><button class="header__action" id="searchToggle"><i class="ri-search-line"></i></button><a href="wishlist.html" class="header__action"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="about.html" class="mobile-menu__link">About</a><a href="contact.html" class="mobile-menu__link active">Contact</a></nav></div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button><div class="search-overlay__inner"><form class="search-overlay__form" action="search.html"><input type="text" class="search-overlay__input" placeholder="Search..." id="searchInput"><button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button></form></div></div>
+
+  <main style="padding-top:var(--header-height);">
+    <section class="page-banner"><div class="container"><h1 class="page-banner__title">Contact Us</h1><p class="page-banner__subtitle">We'd love to hear from you. Get in touch with us anytime.</p></div></section>
+    <div class="container"><nav class="breadcrumb"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li><li class="breadcrumb__item"><span class="breadcrumb__current">Contact</span></li></ol></nav></div>
+
+    <section class="section">
+      <div class="container">
+        <!-- Contact Cards -->
+        <div class="contact-grid reveal">
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="ri-phone-line"></i></div>
+            <h3 class="contact-card__title">Call Us</h3>
+            <p class="contact-card__info"><a href="tel:+1234567890">+1 (234) 567-890</a><br><a href="tel:+1234567891">+1 (234) 567-891</a></p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="ri-mail-line"></i></div>
+            <h3 class="contact-card__title">Email Us</h3>
+            <p class="contact-card__info"><a href="mailto:support@luxe.com">support@luxe.com</a><br><a href="mailto:hello@luxe.com">hello@luxe.com</a></p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card__icon"><i class="ri-map-pin-line"></i></div>
+            <h3 class="contact-card__title">Visit Us</h3>
+            <p class="contact-card__info">123 Fashion Avenue<br>New York, NY 10001</p>
+          </div>
+        </div>
+
+        <!-- Contact Form + Map -->
+        <div class="contact-layout">
+          <div class="contact-form-section reveal-left">
+            <h2 class="contact-form-section__title">Send us a Message</h2>
+            <p class="contact-form-section__desc">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <form>
+              <div class="checkout-form__row">
+                <div class="form-group"><label class="form-label" for="contactName">Your Name *</label><input type="text" class="form-input" id="contactName" required placeholder="John Doe"></div>
+                <div class="form-group"><label class="form-label" for="contactEmail">Email Address *</label><input type="email" class="form-input" id="contactEmail" required placeholder="you@example.com"></div>
+              </div>
+              <div class="form-group"><label class="form-label" for="contactSubject">Subject</label><select class="form-select" id="contactSubject"><option>General Inquiry</option><option>Order Support</option><option>Product Question</option><option>Return / Exchange</option><option>Partnership</option><option>Other</option></select></div>
+              <div class="form-group"><label class="form-label" for="contactMessage">Message *</label><textarea class="form-textarea" id="contactMessage" required placeholder="Tell us how we can help..."></textarea></div>
+              <button type="submit" class="btn btn--accent btn--lg"><i class="ri-send-plane-line"></i> Send Message</button>
+            </form>
+
+            <!-- Working Hours -->
+            <div class="working-hours">
+              <h3 class="working-hours__title">Working Hours</h3>
+              <div class="working-hours__list">
+                <div class="working-hours__item"><span class="working-hours__day">Monday - Friday</span><span>9:00 AM - 6:00 PM</span></div>
+                <div class="working-hours__item"><span class="working-hours__day">Saturday</span><span>10:00 AM - 4:00 PM</span></div>
+                <div class="working-hours__item"><span class="working-hours__day">Sunday</span><span>Closed</span></div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-social">
+              <h3 class="contact-social__title">Follow Us</h3>
+              <div class="contact-social__links">
+                <a href="#" class="contact-social__link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#" class="contact-social__link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="#" class="contact-social__link" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#" class="contact-social__link" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a>
+                <a href="#" class="contact-social__link" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="contact-map">
+              <div class="contact-map__placeholder">
+                <i class="ri-map-pin-2-fill"></i>
+                <p>123 Fashion Avenue, New York, NY 10001</p>
+                <a href="https://maps.google.com" target="_blank" class="btn btn--outline btn--sm"><i class="ri-map-2-line"></i> Open in Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__main"><div class="container"><div class="footer__grid"><div class="footer__col"><a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a><p class="footer__brand-desc">Premium fashion and lifestyle store.</p></div><div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div><div class="footer__col"><h4 class="footer__heading">Support</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Account</a><a href="cart.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Cart</a></div></div><div class="footer__col"><h4 class="footer__heading">Newsletter</h4><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div></div></div></div><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

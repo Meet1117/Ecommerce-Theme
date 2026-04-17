@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUXE — Premium fashion and lifestyle store. Discover curated collections of clothing, accessories, and more with free shipping worldwide.">
+  <title>LUXE — Premium Fashion & Lifestyle Store</title>
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- ===== Preloader ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__logo">LUXE</div>
+      <div class="preloader__bar"></div>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">LU<span>X</span>E</a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="shop.html" class="nav__link">Shop <i class="ri-arrow-down-s-line"></i></a>
+            <div class="nav__dropdown">
+              <a href="shop.html" class="nav__dropdown-link">All Products</a>
+              <a href="shop.html" class="nav__dropdown-link">Women's Fashion</a>
+              <a href="shop.html" class="nav__dropdown-link">Men's Fashion</a>
+              <a href="shop.html" class="nav__dropdown-link">Accessories</a>
+              <a href="shop.html" class="nav__dropdown-link">Shoes & Bags</a>
+              <a href="shop.html" class="nav__dropdown-link">New Arrivals</a>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="offers.html" class="nav__link">Offers</a>
+          </li>
+          <li class="nav__item">
+            <a href="about.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="header__action header__action--search-desktop" id="searchToggle" aria-label="Search">
+          <i class="ri-search-line"></i>
+        </button>
+        <a href="wishlist.html" class="header__action" aria-label="Wishlist">
+          <i class="ri-heart-line"></i>
+          <span class="header__badge" id="wishlistCount">2</span>
+        </a>
+        <a href="cart.html" class="header__action" aria-label="Cart">
+          <i class="ri-shopping-bag-line"></i>
+          <span class="header__badge" id="cartCount">3</span>
+        </a>
+        <a href="login.html" class="header__action" aria-label="Account">
+          <i class="ri-user-line"></i>
+        </a>
+        <button class="header__menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Mobile Menu ===== -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__header">
+      <span class="mobile-menu__logo">LU<span>X</span>E</span>
+      <button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html" class="mobile-menu__link active">Home</a>
+      <a href="shop.html" class="mobile-menu__link" data-submenu="shop">Shop <i class="ri-arrow-down-s-line"></i></a>
+      <div class="mobile-menu__sub" id="shop-submenu">
+        <a href="shop.html" class="mobile-menu__sub-link">All Products</a>
+        <a href="shop.html" class="mobile-menu__sub-link">Women's Fashion</a>
+        <a href="shop.html" class="mobile-menu__sub-link">Men's Fashion</a>
+        <a href="shop.html" class="mobile-menu__sub-link">Accessories</a>
+        <a href="shop.html" class="mobile-menu__sub-link">Shoes & Bags</a>
+      </div>
+      <a href="offers.html" class="mobile-menu__link">Offers</a>
+      <a href="about.html" class="mobile-menu__link">About Us</a>
+      <a href="contact.html" class="mobile-menu__link">Contact</a>
+      <a href="faq.html" class="mobile-menu__link">FAQs</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="login.html" class="btn btn--accent btn--full">Sign In</a>
+      <a href="register.html" class="btn btn--outline btn--full">Create Account</a>
+    </div>
+  </div>
+
+  <!-- ===== Search Overlay ===== -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button>
+    <div class="search-overlay__inner">
+      <form class="search-overlay__form" action="search.html">
+        <input type="text" class="search-overlay__input" placeholder="Search for products..." id="searchInput" autocomplete="off">
+        <button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button>
+      </form>
+      <div class="search-overlay__suggestions">
+        <p class="search-overlay__label">Popular Searches</p>
+        <div class="search-overlay__tags">
+          <span class="search-overlay__tag">Summer Collection</span>
+          <span class="search-overlay__tag">Linen Shirts</span>
+          <span class="search-overlay__tag">Leather Bags</span>
+          <span class="search-overlay__tag">Dresses</span>
+          <span class="search-overlay__tag">Sneakers</span>
+          <span class="search-overlay__tag">Watches</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Main Content ===== -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide hero__slide" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80');">
+            <div class="hero__content">
+              <span class="hero__label"><i class="ri-sparkling-line"></i> New Season Collection</span>
+              <h1 class="hero__title">Elevate Your <span>Style</span></h1>
+              <p class="hero__desc">Discover our curated collection of premium fashion pieces crafted for the modern individual.</p>
+              <div class="hero__btns">
+                <a href="shop.html" class="btn btn--accent btn--lg">Shop Collection</a>
+                <a href="about.html" class="btn btn--outline-white btn--lg">Our Story</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide hero__slide" style="background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1920&q=80');">
+            <div class="hero__content">
+              <span class="hero__label"><i class="ri-fire-line"></i> Limited Edition</span>
+              <h1 class="hero__title">Summer <span>Essentials</span></h1>
+              <p class="hero__desc">Light fabrics, bold patterns, timeless designs. Dress for the season with our handpicked summer range.</p>
+              <div class="hero__btns">
+                <a href="shop.html" class="btn btn--accent btn--lg">Explore Now</a>
+                <a href="offers.html" class="btn btn--outline-white btn--lg">View Offers</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide hero__slide" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1920&q=80');">
+            <div class="hero__content">
+              <span class="hero__label"><i class="ri-percent-line"></i> Up to 50% Off</span>
+              <h1 class="hero__title">The Grand <span>Sale</span></h1>
+              <p class="hero__desc">Don't miss our biggest sale of the year. Premium brands at unbeatable prices for a limited time.</p>
+              <div class="hero__btns">
+                <a href="offers.html" class="btn btn--accent btn--lg">Shop Sale</a>
+                <a href="shop.html" class="btn btn--outline-white btn--lg">All Products</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <div class="mouse"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar section--sm">
+      <div class="container">
+        <div class="features-bar__grid">
+          <div class="feature-item reveal">
+            <div class="feature-item__icon"><i class="ri-truck-line"></i></div>
+            <div>
+              <div class="feature-item__title">Free Shipping</div>
+              <p class="feature-item__desc">On orders over $150</p>
+            </div>
+          </div>
+          <div class="feature-item reveal delay-1">
+            <div class="feature-item__icon"><i class="ri-refresh-line"></i></div>
+            <div>
+              <div class="feature-item__title">Easy Returns</div>
+              <p class="feature-item__desc">30-day return policy</p>
+            </div>
+          </div>
+          <div class="feature-item reveal delay-2">
+            <div class="feature-item__icon"><i class="ri-shield-check-line"></i></div>
+            <div>
+              <div class="feature-item__title">Secure Payment</div>
+              <p class="feature-item__desc">100% secure checkout</p>
+            </div>
+          </div>
+          <div class="feature-item reveal delay-3">
+            <div class="feature-item__icon"><i class="ri-customer-service-2-line"></i></div>
+            <div>
+              <div class="feature-item__title">24/7 Support</div>
+              <p class="feature-item__desc">Dedicated support team</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__subtitle">Browse by Category</span>
+          <h2 class="section__title">Featured Categories</h2>
+          <p class="section__desc">Explore our carefully selected categories to find exactly what you're looking for.</p>
+        </div>
+        <div class="categories__grid">
+          <a href="shop.html" class="category-card reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=600&q=80" alt="Women's Collection" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__name">Women</h3>
+              <p class="category-card__count">245 Products</p>
+              <span class="category-card__link">Shop Now <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+          <a href="shop.html" class="category-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Men's Collection" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__name">Men</h3>
+              <p class="category-card__count">198 Products</p>
+              <span class="category-card__link">Shop Now <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+          <a href="shop.html" class="category-card reveal delay-3">
+            <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?w=600&q=80" alt="Accessories" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__name">Accessories</h3>
+              <p class="category-card__count">124 Products</p>
+              <span class="category-card__link">Shop Now <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+          <a href="shop.html" class="category-card reveal delay-4">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80" alt="Shoes" class="category-card__img">
+            <div class="category-card__overlay">
+              <h3 class="category-card__name">Shoes</h3>
+              <p class="category-card__count">86 Products</p>
+              <span class="category-card__link">Shop Now <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section section--bg" id="bestSellers">
+      <div class="container">
+        <div class="flex justify-between items-end mb-10">
+          <div class="reveal">
+            <span class="section__subtitle" style="text-align:left">Top Picks</span>
+            <h2 class="section__title" style="text-align:left">Best Sellers</h2>
+          </div>
+          <div class="slider-nav reveal">
+            <button class="slider-nav__btn best-prev" aria-label="Previous"><i class="ri-arrow-left-s-line"></i></button>
+            <button class="slider-nav__btn best-next" aria-label="Next"><i class="ri-arrow-right-s-line"></i></button>
+          </div>
+        </div>
+        <div class="products-slider">
+          <div class="swiper best-sellers-slider">
+            <div class="swiper-wrapper">
+              <!-- Product 1 -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&q=80" alt="Linen Blazer" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--best">Best Seller</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                      <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add">
+                      <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Men's Clothing</p>
+                    <a href="product.html" class="product-card__title">Premium Linen Blazer — Slim Fit</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                      </div>
+                      <span class="product-card__review-count">(128)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$189.00</span>
+                      <span class="product-card__original-price">$249.00</span>
+                      <span class="product-card__discount">-24%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&q=80" alt="Leather Sneakers" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--hot">Hot</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                      <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add">
+                      <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Shoes</p>
+                    <a href="product.html" class="product-card__title">Classic Leather Sneakers — White</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      </div>
+                      <span class="product-card__review-count">(256)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$129.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 3 -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=500&q=80" alt="Cashmere Scarf" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--best">Best Seller</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                      <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add">
+                      <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Accessories</p>
+                    <a href="product.html" class="product-card__title">Luxury Cashmere Scarf — Camel</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i>
+                      </div>
+                      <span class="product-card__review-count">(89)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$78.00</span>
+                      <span class="product-card__original-price">$95.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80" alt="Trench Coat" class="product-card__img">
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                      <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add">
+                      <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Women's Clothing</p>
+                    <a href="product.html" class="product-card__title">Classic Cotton Trench Coat</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                      </div>
+                      <span class="product-card__review-count">(167)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$245.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 5 -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=500&q=80" alt="Designer Watch" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                      <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add">
+                      <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Accessories</p>
+                    <a href="product.html" class="product-card__title">Minimalist Designer Watch — Gold</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      </div>
+                      <span class="product-card__review-count">(312)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$349.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section class="section">
+      <div class="container">
+        <div class="promo-banner reveal">
+          <div class="promo-card">
+            <div class="promo-card__bg" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80');"></div>
+            <div class="promo-card__overlay"></div>
+            <div class="promo-card__content">
+              <p class="promo-card__label">New Collection</p>
+              <h3 class="promo-card__title">Summer Vibes 2026</h3>
+              <p class="promo-card__desc">Light, breathable, and effortlessly stylish. Designed for warm days and cool nights.</p>
+              <a href="shop.html" class="btn btn--accent btn--sm">Shop Now</a>
+            </div>
+          </div>
+          <div class="promo-card">
+            <div class="promo-card__bg" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=900&q=80');"></div>
+            <div class="promo-card__overlay"></div>
+            <div class="promo-card__content">
+              <p class="promo-card__label">Exclusive Deal</p>
+              <h3 class="promo-card__title">Accessories Sale</h3>
+              <p class="promo-card__desc">Elevate any outfit with our premium accessories. Bags, watches, jewelry and more.</p>
+              <a href="offers.html" class="btn btn--accent btn--sm">Get 30% Off</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section section--bg" id="newArrivals">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__subtitle">Just Landed</span>
+          <h2 class="section__title">New Arrivals</h2>
+          <p class="section__desc">The latest additions to our collection — be the first to wear them.</p>
+        </div>
+        <div class="grid grid-4 gap-6">
+          <div class="product-card reveal delay-1">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Silk Midi Dress" class="product-card__img">
+              <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+              </div>
+              <div class="product-card__quick-add">
+                <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__category">Women's Clothing</p>
+              <a href="product.html" class="product-card__title">Silk Midi Dress — Emerald Green</a>
+              <div class="product-card__rating">
+                <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div>
+                <span class="product-card__review-count">(24)</span>
+              </div>
+              <div class="product-card__price"><span class="product-card__current-price">$159.00</span></div>
+            </div>
+          </div>
+          <div class="product-card reveal delay-2">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80" alt="Tailored Chinos" class="product-card__img">
+              <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+              </div>
+              <div class="product-card__quick-add">
+                <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__category">Men's Clothing</p>
+              <a href="product.html" class="product-card__title">Tailored Slim Chinos — Navy</a>
+              <div class="product-card__rating">
+                <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                <span class="product-card__review-count">(56)</span>
+              </div>
+              <div class="product-card__price"><span class="product-card__current-price">$89.00</span></div>
+            </div>
+          </div>
+          <div class="product-card reveal delay-3">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80" alt="Leather Handbag" class="product-card__img">
+              <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+              </div>
+              <div class="product-card__quick-add">
+                <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__category">Bags</p>
+              <a href="product.html" class="product-card__title">Italian Leather Tote Bag — Tan</a>
+              <div class="product-card__rating">
+                <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                <span class="product-card__review-count">(73)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="product-card__current-price">$198.00</span>
+                <span class="product-card__original-price">$260.00</span>
+                <span class="product-card__discount">-24%</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-card reveal delay-4">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Running Shoes" class="product-card__img">
+              <div class="product-card__badges">
+                <span class="product-card__badge badge--new">New</span>
+                <span class="product-card__badge badge--sale">Sale</span>
+              </div>
+              <div class="product-card__actions">
+                <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+              </div>
+              <div class="product-card__quick-add">
+                <button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+              </div>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__category">Shoes</p>
+              <a href="product.html" class="product-card__title">Performance Running Shoes — Red</a>
+              <div class="product-card__rating">
+                <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div>
+                <span class="product-card__review-count">(142)</span>
+              </div>
+              <div class="product-card__price">
+                <span class="product-card__current-price">$109.00</span>
+                <span class="product-card__original-price">$149.00</span>
+                <span class="product-card__discount">-27%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8 reveal">
+          <a href="shop.html" class="btn btn--outline">View All Products <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer / Countdown -->
+    <section class="offer-section section section--lg" id="offer">
+      <div class="container">
+        <div class="offer__inner">
+          <div class="offer__content reveal-left">
+            <p class="offer__label">Limited Time Offer</p>
+            <h2 class="offer__title">Get <span>50% Off</span> Summer Collection</h2>
+            <p class="offer__desc">Hurry up! Our exclusive summer sale ends soon. Don't miss this chance to upgrade your wardrobe at amazing prices.</p>
+            <div class="countdown" id="countdown">
+              <div class="countdown__item">
+                <div class="countdown__value" id="days">15</div>
+                <span class="countdown__label">Days</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__value" id="hours">08</div>
+                <span class="countdown__label">Hours</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__value" id="minutes">42</div>
+                <span class="countdown__label">Mins</span>
+              </div>
+              <div class="countdown__item">
+                <div class="countdown__value" id="seconds">30</div>
+                <span class="countdown__label">Secs</span>
+              </div>
+            </div>
+            <a href="offers.html" class="btn btn--accent btn--lg">Shop the Sale</a>
+          </div>
+          <div class="offer__image reveal-right">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="Summer Sale">
+            <div class="offer__discount-badge"><span class="value">50%</span><span class="text">Off</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="section" id="trending">
+      <div class="container">
+        <div class="flex justify-between items-end mb-10">
+          <div class="reveal">
+            <span class="section__subtitle" style="text-align:left">What's Hot</span>
+            <h2 class="section__title" style="text-align:left">Trending Now</h2>
+          </div>
+          <div class="slider-nav reveal">
+            <button class="slider-nav__btn trending-prev" aria-label="Previous"><i class="ri-arrow-left-s-line"></i></button>
+            <button class="slider-nav__btn trending-next" aria-label="Next"><i class="ri-arrow-right-s-line"></i></button>
+          </div>
+        </div>
+        <div class="products-slider">
+          <div class="swiper trending-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a7a?w=500&q=80" alt="Denim Jacket" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--hot">Hot</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Men's Clothing</p>
+                    <a href="product.html" class="product-card__title">Vintage Denim Jacket — Washed Blue</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                      <span class="product-card__review-count">(98)</span>
+                    </div>
+                    <div class="product-card__price"><span class="product-card__current-price">$135.00</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80" alt="Summer Dress" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--sale">-20%</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Women's Clothing</p>
+                    <a href="product.html" class="product-card__title">Floral Wrap Summer Dress</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                      <span class="product-card__review-count">(204)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$79.00</span>
+                      <span class="product-card__original-price">$99.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=500&q=80" alt="Watch" class="product-card__img">
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Accessories</p>
+                    <a href="product.html" class="product-card__title">Swiss Automatic Chronograph Watch</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div>
+                      <span class="product-card__review-count">(67)</span>
+                    </div>
+                    <div class="product-card__price"><span class="product-card__current-price">$425.00</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80" alt="Backpack" class="product-card__img">
+                    <div class="product-card__badges"><span class="product-card__badge badge--hot">Hot</span></div>
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Bags</p>
+                    <a href="product.html" class="product-card__title">Leather Travel Backpack — Brown</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                      <span class="product-card__review-count">(156)</span>
+                    </div>
+                    <div class="product-card__price"><span class="product-card__current-price">$175.00</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-card__image">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80" alt="Leather Jacket" class="product-card__img">
+                    <div class="product-card__actions">
+                      <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                      <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    </div>
+                    <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                  </div>
+                  <div class="product-card__info">
+                    <p class="product-card__category">Men's Clothing</p>
+                    <a href="product.html" class="product-card__title">Classic Leather Jacket — Black</a>
+                    <div class="product-card__rating">
+                      <div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                      <span class="product-card__review-count">(289)</span>
+                    </div>
+                    <div class="product-card__price">
+                      <span class="product-card__current-price">$299.00</span>
+                      <span class="product-card__original-price">$399.00</span>
+                      <span class="product-card__discount">-25%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--bg" id="testimonials">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__subtitle">What Our Customers Say</span>
+          <h2 class="section__title">Testimonials</h2>
+        </div>
+        <div class="testimonials__slider reveal">
+          <div class="swiper testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__quote-icon">"</div>
+                  <div class="testimonial-card__stars">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
+                  <p class="testimonial-card__text">Absolutely love the quality and attention to detail in every piece I've ordered. The packaging is beautiful and delivery is always on time. LUXE has become my go-to store for premium fashion.</p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah Johnson"></div>
+                    <div class="testimonial-card__author-info">
+                      <p class="testimonial-card__name">Sarah Johnson</p>
+                      <p class="testimonial-card__role">Verified Buyer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__quote-icon">"</div>
+                  <div class="testimonial-card__stars">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                  </div>
+                  <p class="testimonial-card__text">The customer service is exceptional. I had an issue with sizing and they sorted it out immediately with free exchange shipping. The quality of their linen collection is unmatched at this price point.</p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael Chen"></div>
+                    <div class="testimonial-card__author-info">
+                      <p class="testimonial-card__name">Michael Chen</p>
+                      <p class="testimonial-card__role">Loyal Customer</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-card__quote-icon">"</div>
+                  <div class="testimonial-card__stars">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                  </div>
+                  <p class="testimonial-card__text">I've been shopping online for years and LUXE stands out for both quality and style. Their sustainable fashion line is incredible. Everything fits perfectly and looks even better in person than on the website.</p>
+                  <div class="testimonial-card__author">
+                    <div class="testimonial-card__avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emma Rodriguez"></div>
+                    <div class="testimonial-card__author-info">
+                      <p class="testimonial-card__name">Emma Rodriguez</p>
+                      <p class="testimonial-card__role">Fashion Blogger</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Logos -->
+    <section class="section--sm brands">
+      <div class="container">
+        <div class="brands__track">
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">GUCCI</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">PRADA</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">VERSACE</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">ARMANI</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">DIOR</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">CHANEL</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">BURBERRY</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">ZARA</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">GUCCI</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">PRADA</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">VERSACE</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">ARMANI</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">DIOR</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">CHANEL</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">BURBERRY</span>
+          <span class="brand-logo" style="font-family:var(--ff-heading);font-size:24px;font-weight:700;height:auto;filter:none;opacity:0.25;">ZARA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section" id="newsletter">
+      <div class="container">
+        <div class="newsletter__inner reveal">
+          <i class="ri-mail-send-line newsletter__icon"></i>
+          <h2 class="newsletter__title">Join the LUXE Club</h2>
+          <p class="newsletter__desc">Subscribe to our newsletter and get 15% off your first order, exclusive access to sales, and style tips delivered to your inbox.</p>
+          <form class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+          <p class="newsletter__note">By subscribing, you agree to our Privacy Policy. Unsubscribe at any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="reveal">
+          <h2 class="cta-section__title">Ready to Upgrade Your Wardrobe?</h2>
+          <p class="cta-section__desc">Explore hundreds of premium, handpicked fashion pieces. Free shipping on orders over $150.</p>
+          <div class="cta-section__btns">
+            <a href="shop.html" class="btn btn--primary btn--lg">Start Shopping</a>
+            <a href="offers.html" class="btn btn--outline btn--lg">View Deals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a href="index.html" class="header__logo" style="color: #fff; margin-bottom: var(--space-4); display: inline-block;">LU<span>X</span>E</a>
+            <p class="footer__brand-desc">Premium fashion and lifestyle store offering curated collections of clothing, accessories, and more. Quality meets style in every piece we offer.</p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Quick Links</h4>
+            <div class="footer__links">
+              <a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop All</a>
+              <a href="offers.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Offers & Deals</a>
+              <a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About Us</a>
+              <a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact Us</a>
+              <a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Customer Service</h4>
+            <div class="footer__links">
+              <a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> My Account</a>
+              <a href="cart.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shopping Cart</a>
+              <a href="wishlist.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Wishlist</a>
+              <a href="#" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shipping Policy</a>
+              <a href="#" class="footer__link"><i class="ri-arrow-right-s-line"></i> Return Policy</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Newsletter</h4>
+            <p class="footer__newsletter-text">Get the latest updates on new arrivals and exclusive offers.</p>
+            <form class="footer__newsletter-form">
+              <input type="email" class="footer__newsletter-input" placeholder="Your email">
+              <button type="submit" class="footer__newsletter-btn">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copyright">&copy; 2026 LUXE. All rights reserved. Designed with <i class="ri-heart-fill" style="color:var(--clr-accent)"></i> for fashion lovers.</p>
+          <div class="footer__payments">
+            <div class="footer__payment-icon">VISA</div>
+            <div class="footer__payment-icon">MC</div>
+            <div class="footer__payment-icon">AMEX</div>
+            <div class="footer__payment-icon">PP</div>
+            <div class="footer__payment-icon">GPay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

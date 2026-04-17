@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LUXE Offers & Sales — exclusive discounts, limited-time deals, and coupon codes on premium fashion.">
+  <title>Offers & Sales — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link active">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li></ul></nav><div class="header__actions"><button class="header__action" id="searchToggle"><i class="ri-search-line"></i></button><a href="wishlist.html" class="header__action"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="offers.html" class="mobile-menu__link active">Offers</a><a href="about.html" class="mobile-menu__link">About</a><a href="contact.html" class="mobile-menu__link">Contact</a></nav></div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button><div class="search-overlay__inner"><form class="search-overlay__form" action="search.html"><input type="text" class="search-overlay__input" placeholder="Search..." id="searchInput"><button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button></form></div></div>
+
+  <main style="padding-top:var(--header-height);">
+    <!-- Offers Hero -->
+    <section class="offers-hero">
+      <div class="container" style="position:relative;z-index:2;">
+        <span class="offers-hero__badge">Limited Time</span>
+        <h1 class="offers-hero__title">Up to <span>50% Off</span> Everything</h1>
+        <p class="offers-hero__desc">Don't miss our biggest sale of the season. Premium fashion at unbeatable prices.</p>
+        <div class="countdown" id="countdown" style="justify-content:center;margin-bottom:var(--space-8);">
+          <div class="countdown__item"><div class="countdown__value" id="days">15</div><span class="countdown__label">Days</span></div>
+          <div class="countdown__item"><div class="countdown__value" id="hours">08</div><span class="countdown__label">Hours</span></div>
+          <div class="countdown__item"><div class="countdown__value" id="minutes">42</div><span class="countdown__label">Mins</span></div>
+          <div class="countdown__item"><div class="countdown__value" id="seconds">30</div><span class="countdown__label">Secs</span></div>
+        </div>
+        <a href="shop.html" class="btn btn--accent btn--lg">Shop All Deals</a>
+      </div>
+    </section>
+
+    <!-- Coupon Codes -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header reveal"><span class="section__subtitle">Exclusive Codes</span><h2 class="section__title">Coupon Codes</h2></div>
+        <div class="coupon-grid">
+          <div class="coupon-card reveal delay-1">
+            <p class="coupon-card__discount">15% OFF</p>
+            <p class="coupon-card__desc">On your first order. Valid for new customers only.</p>
+            <div class="coupon-card__code"><span class="coupon-card__code-text">FIRST10</span><button class="coupon-card__copy">Copy</button></div>
+          </div>
+          <div class="coupon-card reveal delay-2">
+            <p class="coupon-card__discount">20% OFF</p>
+            <p class="coupon-card__desc">On orders above $200. Limited time offer.</p>
+            <div class="coupon-card__code"><span class="coupon-card__code-text">SAVE20</span><button class="coupon-card__copy">Copy</button></div>
+          </div>
+          <div class="coupon-card reveal delay-3">
+            <p class="coupon-card__discount">$15 OFF</p>
+            <p class="coupon-card__desc">Use code on any order. No minimum purchase.</p>
+            <div class="coupon-card__code"><span class="coupon-card__code-text">LUXE15</span><button class="coupon-card__copy">Copy</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deal Products -->
+    <section class="section section--bg">
+      <div class="container">
+        <div class="section__header reveal"><span class="section__subtitle">Hot Deals</span><h2 class="section__title">Limited Time Deals</h2><p class="section__desc">These offers won't last long — grab them before they're gone!</p></div>
+        <div class="grid grid-4 gap-6">
+          <div class="product-card deal-card reveal delay-1">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&q=80" alt="Blazer" class="product-card__img">
+              <div class="deal-card__percentage">-24%</div>
+              <div class="deal-card__timer"><span>15d</span><span>08h</span><span>42m</span></div>
+              <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+            </div>
+            <div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Premium Linen Blazer</a><div class="product-card__price"><span class="product-card__current-price">$189.00</span><span class="product-card__original-price">$249.00</span></div></div>
+          </div>
+          <div class="product-card deal-card reveal delay-2">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80" alt="Tote Bag" class="product-card__img">
+              <div class="deal-card__percentage">-24%</div>
+              <div class="deal-card__timer"><span>10d</span><span>05h</span><span>12m</span></div>
+              <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+            </div>
+            <div class="product-card__info"><p class="product-card__category">Bags</p><a href="product.html" class="product-card__title">Italian Leather Tote</a><div class="product-card__price"><span class="product-card__current-price">$198.00</span><span class="product-card__original-price">$260.00</span></div></div>
+          </div>
+          <div class="product-card deal-card reveal delay-3">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80" alt="Leather Jacket" class="product-card__img">
+              <div class="deal-card__percentage">-25%</div>
+              <div class="deal-card__timer"><span>07d</span><span>22h</span><span>35m</span></div>
+              <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+            </div>
+            <div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Classic Leather Jacket</a><div class="product-card__price"><span class="product-card__current-price">$299.00</span><span class="product-card__original-price">$399.00</span></div></div>
+          </div>
+          <div class="product-card deal-card reveal delay-4">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Running Shoes" class="product-card__img">
+              <div class="deal-card__percentage">-27%</div>
+              <div class="deal-card__timer"><span>03d</span><span>14h</span><span>18m</span></div>
+              <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+            </div>
+            <div class="product-card__info"><p class="product-card__category">Shoes</p><a href="product.html" class="product-card__title">Running Shoes — Red</a><div class="product-card__price"><span class="product-card__current-price">$109.00</span><span class="product-card__original-price">$149.00</span></div></div>
+          </div>
+        </div>
+        <div class="text-center mt-8 reveal"><a href="shop.html" class="btn btn--outline btn--lg">View All Deals <i class="ri-arrow-right-line"></i></a></div>
+      </div>
+    </section>
+
+    <!-- Promo Banners -->
+    <section class="section">
+      <div class="container">
+        <div class="promo-banner reveal">
+          <div class="promo-card">
+            <div class="promo-card__bg" style="background-image:url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80');"></div>
+            <div class="promo-card__overlay"></div>
+            <div class="promo-card__content"><p class="promo-card__label">Flash Sale</p><h3 class="promo-card__title">Women's Collection</h3><p class="promo-card__desc">Extra 30% off on all women's fashion this weekend only.</p><a href="shop.html" class="btn btn--accent btn--sm">Shop Now</a></div>
+          </div>
+          <div class="promo-card">
+            <div class="promo-card__bg" style="background-image:url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=900&q=80');"></div>
+            <div class="promo-card__overlay"></div>
+            <div class="promo-card__content"><p class="promo-card__label">Bundle Deal</p><h3 class="promo-card__title">Buy 2 Get 1 Free</h3><p class="promo-card__desc">Mix and match from our accessories collection.</p><a href="shop.html" class="btn btn--accent btn--sm">Explore</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__main"><div class="container"><div class="footer__grid"><div class="footer__col"><a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a><p class="footer__brand-desc">Premium fashion and lifestyle store.</p></div><div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a><a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact</a></div></div><div class="footer__col"><h4 class="footer__heading">Support</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Account</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div><div class="footer__col"><h4 class="footer__heading">Newsletter</h4><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div></div></div></div><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

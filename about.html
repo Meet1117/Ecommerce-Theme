@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About LUXE — our story, mission, values, and the team behind the brand. Discover what makes us different.">
+  <title>About Us — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link active">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li></ul></nav><div class="header__actions"><button class="header__action" id="searchToggle"><i class="ri-search-line"></i></button><a href="wishlist.html" class="header__action"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="about.html" class="mobile-menu__link active">About</a><a href="contact.html" class="mobile-menu__link">Contact</a><a href="faq.html" class="mobile-menu__link">FAQs</a></nav></div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button><div class="search-overlay__inner"><form class="search-overlay__form" action="search.html"><input type="text" class="search-overlay__input" placeholder="Search..." id="searchInput"><button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button></form></div></div>
+
+  <main style="padding-top:var(--header-height);">
+    <section class="page-banner"><div class="container"><h1 class="page-banner__title">About Us</h1><p class="page-banner__subtitle">The story behind LUXE — where quality meets style</p></div></section>
+    <div class="container"><nav class="breadcrumb"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li><li class="breadcrumb__item"><span class="breadcrumb__current">About Us</span></li></ol></nav></div>
+
+    <!-- Brand Story -->
+    <section class="section">
+      <div class="container">
+        <div class="about-hero reveal">
+          <div class="about-hero__image"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="LUXE Store"></div>
+          <div>
+            <span class="section__subtitle" style="text-align:left;">Our Story</span>
+            <h2 class="about-hero__title">Redefining Premium Fashion Since 2018</h2>
+            <p class="about-hero__text">LUXE was born from a simple belief — that everyone deserves access to premium, well-crafted fashion without the luxury price tag. Founded in 2018 in New York City, we started as a small curated boutique with a vision to bridge the gap between quality and accessibility.</p>
+            <p class="about-hero__text">Today, we've grown into a trusted global fashion destination, serving over 500,000 customers across 40+ countries. But our core mission remains unchanged: to deliver exceptional quality, timeless design, and an unmatched shopping experience.</p>
+            <p class="about-hero__text">Every piece in our collection is carefully selected from over 200 artisan partners and brands worldwide, ensuring that quality, sustainability, and style are never compromised.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission / Vision / Values -->
+    <section class="section section--bg">
+      <div class="container">
+        <div class="section__header reveal"><span class="section__subtitle">What We Stand For</span><h2 class="section__title">Our Values</h2></div>
+        <div class="values-grid">
+          <div class="value-card reveal delay-1">
+            <div class="value-card__icon"><i class="ri-leaf-line"></i></div>
+            <h3 class="value-card__title">Sustainability</h3>
+            <p class="value-card__desc">We're committed to ethical fashion. From sustainable materials to eco-friendly packaging, we minimize our footprint without compromising on quality.</p>
+          </div>
+          <div class="value-card reveal delay-2">
+            <div class="value-card__icon"><i class="ri-award-line"></i></div>
+            <h3 class="value-card__title">Quality First</h3>
+            <p class="value-card__desc">Every product undergoes rigorous quality checks. We partner with artisan manufacturers who share our passion for craftsmanship and attention to detail.</p>
+          </div>
+          <div class="value-card reveal delay-3">
+            <div class="value-card__icon"><i class="ri-heart-line"></i></div>
+            <h3 class="value-card__title">Customer Love</h3>
+            <p class="value-card__desc">Our customers are at the heart of everything we do. From personal styling advice to hassle-free returns, we ensure every interaction is exceptional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header reveal"><span class="section__subtitle">Our Journey</span><h2 class="section__title">Milestones</h2></div>
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__content"><p class="timeline__year">2018</p><h4 class="timeline__title">The Beginning</h4><p class="timeline__desc">LUXE launched as a boutique online store in New York with just 50 curated products.</p></div>
+            <div class="timeline__dot"></div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__content"><p class="timeline__year">2019</p><h4 class="timeline__title">10K Customers</h4><p class="timeline__desc">Reached our first milestone of 10,000 happy customers and expanded to 500+ products.</p></div>
+            <div class="timeline__dot"></div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__content"><p class="timeline__year">2021</p><h4 class="timeline__title">Going Global</h4><p class="timeline__desc">Expanded shipping to 25 countries and launched our sustainable fashion initiative.</p></div>
+            <div class="timeline__dot"></div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__content"><p class="timeline__year">2023</p><h4 class="timeline__title">Award Winning</h4><p class="timeline__desc">Won "Best Online Fashion Retailer" award and surpassed 300,000 customers worldwide.</p></div>
+            <div class="timeline__dot"></div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__content"><p class="timeline__year">2026</p><h4 class="timeline__title">Today & Beyond</h4><p class="timeline__desc">500K+ customers, 2000+ products, 40+ countries. Our journey continues to grow.</p></div>
+            <div class="timeline__dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal delay-1"><div class="stat-card__value">500K+</div><div class="stat-card__label">Happy Customers</div></div>
+          <div class="stat-card reveal delay-2"><div class="stat-card__value">2000+</div><div class="stat-card__label">Products</div></div>
+          <div class="stat-card reveal delay-3"><div class="stat-card__value">40+</div><div class="stat-card__label">Countries</div></div>
+          <div class="stat-card reveal delay-4"><div class="stat-card__value">200+</div><div class="stat-card__label">Brand Partners</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header reveal"><span class="section__subtitle">The People</span><h2 class="section__title">Meet Our Team</h2></div>
+        <div class="team-grid">
+          <div class="team-card reveal delay-1"><div class="team-card__image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="CEO"></div><h4 class="team-card__name">Alexander Hayes</h4><p class="team-card__role">CEO & Founder</p></div>
+          <div class="team-card reveal delay-2"><div class="team-card__image"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Creative Director"></div><h4 class="team-card__name">Sophia Laurent</h4><p class="team-card__role">Creative Director</p></div>
+          <div class="team-card reveal delay-3"><div class="team-card__image"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="CTO"></div><h4 class="team-card__name">David Kim</h4><p class="team-card__role">Head of Technology</p></div>
+          <div class="team-card reveal delay-4"><div class="team-card__image"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Marketing"></div><h4 class="team-card__name">Emma Rodriguez</h4><p class="team-card__role">Marketing Director</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__main"><div class="container"><div class="footer__grid"><div class="footer__col"><a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a><p class="footer__brand-desc">Premium fashion and lifestyle store.</p><div class="footer__social"><a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a><a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a><a href="#" class="footer__social-link"><i class="ri-twitter-x-fill"></i></a></div></div><div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a><a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div><div class="footer__col"><h4 class="footer__heading">Support</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Account</a><a href="cart.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Cart</a><a href="wishlist.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Wishlist</a></div></div><div class="footer__col"><h4 class="footer__heading">Newsletter</h4><p class="footer__newsletter-text">Get updates on new arrivals.</p><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div></div></div></div><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+  <script src="js/main.js"></script>
+</body>
+</html>

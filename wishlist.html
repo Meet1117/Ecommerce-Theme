@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your wishlist at LUXE. Save your favorite items and shop them later.">
+  <title>Wishlist — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li></ul></nav><div class="header__actions"><button class="header__action" id="searchToggle"><i class="ri-search-line"></i></button><a href="wishlist.html" class="header__action"><i class="ri-heart-fill"></i><span class="header__badge" id="wishlistCount">4</span></a><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="about.html" class="mobile-menu__link">About</a><a href="contact.html" class="mobile-menu__link">Contact</a></nav></div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button><div class="search-overlay__inner"><form class="search-overlay__form" action="search.html"><input type="text" class="search-overlay__input" placeholder="Search..." id="searchInput"><button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button></form></div></div>
+
+  <main style="padding-top: var(--header-height);">
+    <section class="page-banner"><div class="container"><h1 class="page-banner__title">My Wishlist</h1><p class="page-banner__subtitle">Your saved items — ready when you are</p></div></section>
+    <div class="container"><nav class="breadcrumb"><ol class="breadcrumb__list"><li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li><li class="breadcrumb__item"><span class="breadcrumb__current">Wishlist</span></li></ol></nav></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="wishlist-grid">
+          <div class="wishlist-card">
+            <button class="wishlist-card__remove"><i class="ri-close-line"></i></button>
+            <div class="wishlist-card__image"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Silk Dress"></div>
+            <div class="wishlist-card__info">
+              <a href="product.html" class="wishlist-card__name">Silk Midi Dress — Emerald Green</a>
+              <p class="wishlist-card__price">$159.00</p>
+              <p class="wishlist-card__stock text-success"><i class="ri-checkbox-circle-fill"></i> In Stock</p>
+              <button class="btn btn--accent btn--sm btn--full wishlist-card__btn"><i class="ri-shopping-bag-line"></i> Move to Cart</button>
+            </div>
+          </div>
+          <div class="wishlist-card">
+            <button class="wishlist-card__remove"><i class="ri-close-line"></i></button>
+            <div class="wishlist-card__image"><img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=500&q=80" alt="Watch"></div>
+            <div class="wishlist-card__info">
+              <a href="product.html" class="wishlist-card__name">Designer Watch — Gold</a>
+              <p class="wishlist-card__price">$349.00</p>
+              <p class="wishlist-card__stock text-success"><i class="ri-checkbox-circle-fill"></i> In Stock</p>
+              <button class="btn btn--accent btn--sm btn--full wishlist-card__btn"><i class="ri-shopping-bag-line"></i> Move to Cart</button>
+            </div>
+          </div>
+          <div class="wishlist-card">
+            <button class="wishlist-card__remove"><i class="ri-close-line"></i></button>
+            <div class="wishlist-card__image"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80" alt="Leather Jacket"></div>
+            <div class="wishlist-card__info">
+              <a href="product.html" class="wishlist-card__name">Classic Leather Jacket — Black</a>
+              <p class="wishlist-card__price"><span style="text-decoration:line-through;color:var(--clr-gray-300)">$399.00</span> $299.00</p>
+              <p class="wishlist-card__stock text-success"><i class="ri-checkbox-circle-fill"></i> In Stock</p>
+              <button class="btn btn--accent btn--sm btn--full wishlist-card__btn"><i class="ri-shopping-bag-line"></i> Move to Cart</button>
+            </div>
+          </div>
+          <div class="wishlist-card">
+            <button class="wishlist-card__remove"><i class="ri-close-line"></i></button>
+            <div class="wishlist-card__image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Running Shoes"></div>
+            <div class="wishlist-card__info">
+              <a href="product.html" class="wishlist-card__name">Running Shoes — Red</a>
+              <p class="wishlist-card__price">$109.00</p>
+              <p class="wishlist-card__stock text-error"><i class="ri-close-circle-fill"></i> Out of Stock</p>
+              <button class="btn btn--outline btn--sm btn--full wishlist-card__btn" disabled><i class="ri-notification-line"></i> Notify Me</button>
+            </div>
+          </div>
+        </div>
+        <div class="empty-state" style="display:none;">
+          <div class="empty-state__icon"><i class="ri-heart-line"></i></div>
+          <h3 class="empty-state__title">Your wishlist is empty</h3>
+          <p class="empty-state__desc">Start adding items you love to your wishlist. They'll show up here for easy access later.</p>
+          <a href="shop.html" class="btn btn--accent btn--lg">Explore Products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__main"><div class="container"><div class="footer__grid"><div class="footer__col"><a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a><p class="footer__brand-desc">Premium fashion and lifestyle store.</p></div><div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a><a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact</a></div></div><div class="footer__col"><h4 class="footer__heading">Support</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Account</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div><div class="footer__col"><h4 class="footer__heading">Newsletter</h4><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div></div></div></div><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

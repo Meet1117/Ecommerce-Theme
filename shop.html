@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium fashion at LUXE. Browse our curated collection of clothing, shoes, accessories with advanced filters and sorting.">
+  <title>Shop — LUXE Premium Fashion Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+
+  <!-- Header -->
+  <header class="header header--solid" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">LU<span>X</span>E</a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="shop.html" class="nav__link active">Shop <i class="ri-arrow-down-s-line"></i></a>
+            <div class="nav__dropdown">
+              <a href="shop.html" class="nav__dropdown-link">All Products</a>
+              <a href="shop.html" class="nav__dropdown-link">Women's Fashion</a>
+              <a href="shop.html" class="nav__dropdown-link">Men's Fashion</a>
+              <a href="shop.html" class="nav__dropdown-link">Accessories</a>
+              <a href="shop.html" class="nav__dropdown-link">Shoes & Bags</a>
+            </div>
+          </li>
+          <li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="header__action" id="searchToggle" aria-label="Search"><i class="ri-search-line"></i></button>
+        <a href="wishlist.html" class="header__action" aria-label="Wishlist"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a>
+        <a href="cart.html" class="header__action" aria-label="Cart"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a>
+        <a href="login.html" class="header__action" aria-label="Account"><i class="ri-user-line"></i></a>
+        <button class="header__menu-toggle" id="mobileMenuToggle" aria-label="Menu"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div>
+    <nav class="mobile-menu__nav">
+      <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="shop.html" class="mobile-menu__link active">Shop</a>
+      <a href="offers.html" class="mobile-menu__link">Offers</a>
+      <a href="about.html" class="mobile-menu__link">About Us</a>
+      <a href="contact.html" class="mobile-menu__link">Contact</a>
+      <a href="faq.html" class="mobile-menu__link">FAQs</a>
+    </nav>
+    <div class="mobile-menu__footer"><a href="login.html" class="btn btn--accent btn--full">Sign In</a></div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button>
+    <div class="search-overlay__inner">
+      <form class="search-overlay__form" action="search.html">
+        <input type="text" class="search-overlay__input" placeholder="Search for products..." id="searchInput" autocomplete="off">
+        <button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button>
+      </form>
+      <div class="search-overlay__suggestions">
+        <p class="search-overlay__label">Popular Searches</p>
+        <div class="search-overlay__tags">
+          <span class="search-overlay__tag">Summer Collection</span>
+          <span class="search-overlay__tag">Linen Shirts</span>
+          <span class="search-overlay__tag">Leather Bags</span>
+          <span class="search-overlay__tag">Dresses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--header-height);">
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <h1 class="page-banner__title">Shop</h1>
+        <p class="page-banner__subtitle">Discover our complete collection of premium fashion</p>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+      <nav class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li>
+          <li class="breadcrumb__item"><span class="breadcrumb__current">Shop</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Shop Content -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Toolbar -->
+        <div class="shop-toolbar">
+          <div class="shop-toolbar__left">
+            <button class="filter-drawer-toggle"><i class="ri-filter-3-line"></i> Filters</button>
+            <p class="shop-toolbar__count">Showing <span>1–12</span> of <span>86</span> results</p>
+          </div>
+          <div class="shop-toolbar__right">
+            <div class="shop-toolbar__sort">
+              <label for="sortBy">Sort by:</label>
+              <select id="sortBy">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Rating</option>
+                <option value="bestselling">Bestselling</option>
+              </select>
+            </div>
+            <div class="shop-toolbar__views">
+              <button class="shop-toolbar__view-btn active" data-view="grid" aria-label="Grid view"><i class="ri-grid-fill"></i></button>
+              <button class="shop-toolbar__view-btn" data-view="list" aria-label="List view"><i class="ri-list-unordered"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filters -->
+        <div class="active-filters">
+          <div class="active-filter">Women <button class="active-filter__close"><i class="ri-close-line"></i></button></div>
+          <div class="active-filter">$50 - $200 <button class="active-filter__close"><i class="ri-close-line"></i></button></div>
+          <button class="clear-filters">Clear All</button>
+        </div>
+
+        <!-- Filter Overlay (mobile) -->
+        <div class="filter-drawer-overlay"></div>
+
+        <div class="shop-layout">
+
+          <!-- Sidebar Filters -->
+          <aside class="shop-sidebar">
+            <button class="filter-close-btn btn-icon" style="display:none;position:absolute;top:16px;right:16px;"><i class="ri-close-line"></i></button>
+
+            <!-- Category Filter -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Categories <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="filter-categories">
+                  <div class="filter-category active"><span>All Products</span><span class="filter-category__count">86</span></div>
+                  <div class="filter-category"><span>Women's Fashion</span><span class="filter-category__count">34</span></div>
+                  <div class="filter-category"><span>Men's Fashion</span><span class="filter-category__count">28</span></div>
+                  <div class="filter-category"><span>Accessories</span><span class="filter-category__count">18</span></div>
+                  <div class="filter-category"><span>Shoes</span><span class="filter-category__count">12</span></div>
+                  <div class="filter-category"><span>Bags</span><span class="filter-category__count">8</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Price Range <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="price-range">
+                  <div class="price-range__slider">
+                    <div class="price-range__fill"></div>
+                    <div class="price-range__handle price-range__handle--min"></div>
+                    <div class="price-range__handle price-range__handle--max"></div>
+                  </div>
+                  <div class="price-range__values">
+                    <input type="text" class="price-range__input" value="$25" aria-label="Minimum price">
+                    <span>—</span>
+                    <input type="text" class="price-range__input" value="$500" aria-label="Maximum price">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Size -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Size <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="filter-sizes">
+                  <button class="filter-size-btn">XS</button>
+                  <button class="filter-size-btn active">S</button>
+                  <button class="filter-size-btn">M</button>
+                  <button class="filter-size-btn">L</button>
+                  <button class="filter-size-btn">XL</button>
+                  <button class="filter-size-btn">XXL</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colors -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Color <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="filter-colors">
+                  <button class="color-swatch active" style="background:#111" data-color="Black" title="Black"></button>
+                  <button class="color-swatch" style="background:#fff;border:1px solid #ddd" data-color="White" title="White"></button>
+                  <button class="color-swatch" style="background:#1a365d" data-color="Navy" title="Navy"></button>
+                  <button class="color-swatch" style="background:#c9a96e" data-color="Gold" title="Gold"></button>
+                  <button class="color-swatch" style="background:#8b4513" data-color="Brown" title="Brown"></button>
+                  <button class="color-swatch" style="background:#dc3545" data-color="Red" title="Red"></button>
+                  <button class="color-swatch" style="background:#28a745" data-color="Green" title="Green"></button>
+                  <button class="color-swatch" style="background:#f8b4c8" data-color="Pink" title="Pink"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Brand -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Brand <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="filter-brands">
+                  <label class="filter-brand"><input type="checkbox"> LUXE Originals (24)</label>
+                  <label class="filter-brand"><input type="checkbox"> Artisan Co. (18)</label>
+                  <label class="filter-brand"><input type="checkbox"> Nordic Style (15)</label>
+                  <label class="filter-brand"><input type="checkbox"> Maison Belle (12)</label>
+                  <label class="filter-brand"><input type="checkbox"> Urban Edge (9)</label>
+                  <label class="filter-brand"><input type="checkbox"> Classic Club (8)</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="filter-section">
+              <h3 class="filter-section__title">Rating <i class="ri-arrow-up-s-line"></i></h3>
+              <div class="filter-section__content">
+                <div class="filter-ratings">
+                  <label class="filter-rating">
+                    <input type="radio" name="rating" value="5">
+                    <span class="filter-rating__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></span>
+                    <span class="filter-rating__text">(24)</span>
+                  </label>
+                  <label class="filter-rating">
+                    <input type="radio" name="rating" value="4">
+                    <span class="filter-rating__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></span>
+                    <span class="filter-rating__text">& Up (45)</span>
+                  </label>
+                  <label class="filter-rating">
+                    <input type="radio" name="rating" value="3">
+                    <span class="filter-rating__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i><i class="ri-star-line empty"></i></span>
+                    <span class="filter-rating__text">& Up (62)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Product Grid -->
+          <div class="shop-main">
+            <div class="product-grid" id="productGrid">
+              <!-- Product 1 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&q=80" alt="Linen Blazer" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--best">Best Seller</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Men's Clothing</p>
+                  <a href="product.html" class="product-card__title">Premium Linen Blazer — Slim Fit</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(128)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$189.00</span><span class="product-card__original-price">$249.00</span><span class="product-card__discount">-24%</span></div>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Silk Midi Dress" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Women's Clothing</p>
+                  <a href="product.html" class="product-card__title">Silk Midi Dress — Emerald Green</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div><span class="product-card__review-count">(24)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$159.00</span></div>
+                </div>
+              </div>
+              <!-- Product 3 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500&q=80" alt="Leather Sneakers" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--hot">Hot</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Shoes</p>
+                  <a href="product.html" class="product-card__title">Classic Leather Sneakers — White</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(256)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$129.00</span></div>
+                </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80" alt="Trench Coat" class="product-card__img">
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Women's Clothing</p>
+                  <a href="product.html" class="product-card__title">Classic Cotton Trench Coat</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(167)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$245.00</span></div>
+                </div>
+              </div>
+              <!-- Product 5 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80" alt="Leather Tote" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--sale">Sale</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Bags</p>
+                  <a href="product.html" class="product-card__title">Italian Leather Tote Bag — Tan</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(73)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$198.00</span><span class="product-card__original-price">$260.00</span><span class="product-card__discount">-24%</span></div>
+                </div>
+              </div>
+              <!-- Product 6 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=500&q=80" alt="Designer Watch" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Accessories</p>
+                  <a href="product.html" class="product-card__title">Minimalist Designer Watch — Gold</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(312)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$349.00</span></div>
+                </div>
+              </div>
+              <!-- Product 7 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80" alt="Tailored Chinos" class="product-card__img">
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Men's Clothing</p>
+                  <a href="product.html" class="product-card__title">Tailored Slim Chinos — Navy</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(56)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$89.00</span></div>
+                </div>
+              </div>
+              <!-- Product 8 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=500&q=80" alt="Cashmere Scarf" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--best">Best Seller</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Accessories</p>
+                  <a href="product.html" class="product-card__title">Luxury Cashmere Scarf — Camel</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div><span class="product-card__review-count">(89)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$78.00</span><span class="product-card__original-price">$95.00</span></div>
+                </div>
+              </div>
+              <!-- Product 9 -->
+              <div class="product-card">
+                <div class="product-card__image">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Running Shoes" class="product-card__img">
+                  <div class="product-card__badges"><span class="product-card__badge badge--sale">-27%</span></div>
+                  <div class="product-card__actions">
+                    <button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button>
+                    <button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button>
+                    <button class="product-card__action-btn" title="Compare"><i class="ri-shuffle-line"></i></button>
+                  </div>
+                  <div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div>
+                </div>
+                <div class="product-card__info">
+                  <p class="product-card__category">Shoes</p>
+                  <a href="product.html" class="product-card__title">Performance Running Shoes — Red</a>
+                  <div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div><span class="product-card__review-count">(142)</span></div>
+                  <div class="product-card__price"><span class="product-card__current-price">$109.00</span><span class="product-card__original-price">$149.00</span><span class="product-card__discount">-27%</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination">
+              <button class="pagination__btn pagination__btn--arrow" aria-label="Previous"><i class="ri-arrow-left-s-line"></i></button>
+              <button class="pagination__btn active">1</button>
+              <button class="pagination__btn">2</button>
+              <button class="pagination__btn">3</button>
+              <span class="pagination__dots">...</span>
+              <button class="pagination__btn">8</button>
+              <button class="pagination__btn pagination__btn--arrow" aria-label="Next"><i class="ri-arrow-right-s-line"></i></button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a>
+            <p class="footer__brand-desc">Premium fashion and lifestyle store offering curated collections of clothing, accessories, and more.</p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+              <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="ri-pinterest-fill"></i></a>
+            </div>
+          </div>
+          <div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop All</a><a href="offers.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Offers</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About Us</a><a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div>
+          <div class="footer__col"><h4 class="footer__heading">Customer Service</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> My Account</a><a href="cart.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Cart</a><a href="wishlist.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Wishlist</a><a href="#" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shipping</a><a href="#" class="footer__link"><i class="ri-arrow-right-s-line"></i> Returns</a></div></div>
+          <div class="footer__col"><h4 class="footer__heading">Newsletter</h4><p class="footer__newsletter-text">Get updates on new arrivals and offers.</p><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

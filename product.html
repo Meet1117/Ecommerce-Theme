@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Linen Blazer - Slim Fit. Handcrafted from the finest Italian linen. Shop now at LUXE.">
+  <title>Premium Linen Blazer — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+
+  <!-- Header -->
+  <header class="header header--solid" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">LU<span>X</span>E</a>
+      <nav class="nav"><ul class="nav__list">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="shop.html" class="nav__link active">Shop</a></li>
+        <li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul></nav>
+      <div class="header__actions">
+        <button class="header__action" id="searchToggle"><i class="ri-search-line"></i></button>
+        <a href="wishlist.html" class="header__action"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a>
+        <a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a>
+        <a href="login.html" class="header__action"><i class="ri-user-line"></i></a>
+        <button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="offers.html" class="mobile-menu__link">Offers</a><a href="about.html" class="mobile-menu__link">About</a><a href="contact.html" class="mobile-menu__link">Contact</a></nav></div>
+  <div class="search-overlay" id="searchOverlay"><button class="search-overlay__close" id="searchClose"><i class="ri-close-line"></i></button><div class="search-overlay__inner"><form class="search-overlay__form" action="search.html"><input type="text" class="search-overlay__input" placeholder="Search..." id="searchInput"><button type="submit" class="search-overlay__btn"><i class="ri-search-line"></i></button></form></div></div>
+
+  <main style="padding-top: var(--header-height);">
+    <!-- Breadcrumb -->
+    <div class="container">
+      <nav class="breadcrumb"><ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li>
+        <li class="breadcrumb__item"><a href="shop.html" class="breadcrumb__link">Shop</a><i class="ri-arrow-right-s-line breadcrumb__separator"></i></li>
+        <li class="breadcrumb__item"><span class="breadcrumb__current">Premium Linen Blazer</span></li>
+      </ol></nav>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="section">
+      <div class="container">
+        <div class="product-layout">
+          <!-- Gallery -->
+          <div class="product-gallery">
+            <div class="product-gallery__main">
+              <div class="product-gallery__badge"><span class="product-card__badge badge--best">Best Seller</span></div>
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80" alt="Premium Linen Blazer" id="mainImage">
+              <div class="product-gallery__zoom"></div>
+            </div>
+            <div class="product-gallery__thumbnails">
+              <button class="product-gallery__thumb active"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=200&q=60" alt="View 1"></button>
+              <button class="product-gallery__thumb"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=60" alt="View 2"></button>
+              <button class="product-gallery__thumb"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=200&q=60" alt="View 3"></button>
+              <button class="product-gallery__thumb"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a7a?w=200&q=60" alt="View 4"></button>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-info">
+            <p class="product-info__category">Men's Clothing</p>
+            <h1 class="product-info__title">Premium Linen Blazer — Slim Fit</h1>
+
+            <div class="product-info__rating">
+              <div class="product-info__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+              <span class="product-info__review-count">4.5 — <a href="#reviews">128 Reviews</a></span>
+              <span class="product-info__stock product-info__stock--in"><i class="ri-checkbox-circle-fill"></i> In Stock</span>
+            </div>
+
+            <div class="product-info__price">
+              <span class="product-info__current-price">$189.00</span>
+              <span class="product-info__original-price">$249.00</span>
+              <span class="product-info__discount">Save 24%</span>
+            </div>
+
+            <p class="product-info__short-desc">Handcrafted from the finest Italian linen, this blazer combines effortless elegance with a tailored slim fit. Perfect for both formal occasions and smart-casual styling. Breathable, lightweight, and designed for year-round comfort.</p>
+
+            <!-- Color -->
+            <div class="product-info__variant">
+              <p class="product-info__variant-label" data-for="color">Color: <span>Navy Blue</span></p>
+              <div class="color-swatches">
+                <button class="color-swatch active" style="background:#1a365d" data-color="Navy Blue" title="Navy Blue"></button>
+                <button class="color-swatch" style="background:#c9a96e" data-color="Sand" title="Sand"></button>
+                <button class="color-swatch" style="background:#2d3436" data-color="Charcoal" title="Charcoal"></button>
+                <button class="color-swatch" style="background:#dfe6e9" data-color="Light Gray" title="Light Gray"></button>
+              </div>
+            </div>
+
+            <!-- Size -->
+            <div class="product-info__variant">
+              <p class="product-info__variant-label" data-for="size">Size: <span>M</span></p>
+              <div class="size-options">
+                <button class="size-btn">XS</button>
+                <button class="size-btn">S</button>
+                <button class="size-btn active">M</button>
+                <button class="size-btn">L</button>
+                <button class="size-btn">XL</button>
+                <button class="size-btn disabled">XXL</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="product-info__actions">
+              <div class="quantity-selector">
+                <button class="quantity-selector__btn qty-minus"><i class="ri-subtract-line"></i></button>
+                <input type="number" class="quantity-selector__input" value="1" min="1" max="10" aria-label="Quantity">
+                <button class="quantity-selector__btn qty-plus"><i class="ri-add-line"></i></button>
+              </div>
+              <div class="product-info__add-cart">
+                <button class="btn btn--accent btn--lg btn--full"><i class="ri-shopping-bag-line"></i> Add to Cart</button>
+              </div>
+              <button class="btn-icon btn-icon--accent product-info__wishlist" aria-label="Wishlist"><i class="ri-heart-line"></i></button>
+            </div>
+
+            <!-- Delivery Info -->
+            <div class="product-info__delivery">
+              <div class="delivery-item">
+                <i class="ri-truck-line delivery-item__icon"></i>
+                <div>
+                  <p class="delivery-item__title">Free Shipping</p>
+                  <p class="delivery-item__desc">On orders over $150. Delivered in 3-5 business days.</p>
+                </div>
+              </div>
+              <div class="delivery-item">
+                <i class="ri-refresh-line delivery-item__icon"></i>
+                <div>
+                  <p class="delivery-item__title">Easy Returns</p>
+                  <p class="delivery-item__desc">30-day return policy. No questions asked.</p>
+                </div>
+              </div>
+              <div class="delivery-item">
+                <i class="ri-shield-check-line delivery-item__icon"></i>
+                <div>
+                  <p class="delivery-item__title">Quality Guarantee</p>
+                  <p class="delivery-item__desc">Authentic products guaranteed.</p>
+                </div>
+              </div>
+              <div class="delivery-item">
+                <i class="ri-secure-payment-line delivery-item__icon"></i>
+                <div>
+                  <p class="delivery-item__title">Secure Payment</p>
+                  <p class="delivery-item__desc">SSL encrypted checkout.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs tabs" id="reviews">
+          <div class="tabs__nav">
+            <button class="tabs__btn active" data-tab="tab-desc">Description</button>
+            <button class="tabs__btn" data-tab="tab-specs">Specifications</button>
+            <button class="tabs__btn" data-tab="tab-reviews">Reviews (128)</button>
+          </div>
+          <div class="tabs__panel active" id="tab-desc">
+            <div class="product-desc-content">
+              <h4>Crafted for the Modern Gentleman</h4>
+              <p>Our Premium Linen Blazer is a testament to fine craftsmanship and modern design. Made from 100% Italian linen sourced from the mills of Lombardy, this blazer offers unmatched breathability and a natural, textured look that improves with every wear.</p>
+              <h4 style="margin-top:var(--space-6)">Features</h4>
+              <ul>
+                <li>100% Premium Italian Linen</li>
+                <li>Slim fit with slightly tapered waist</li>
+                <li>Notch lapel with pick stitching</li>
+                <li>Two-button front closure</li>
+                <li>3 external pockets, 2 internal pockets</li>
+                <li>Half-lined for breathability</li>
+                <li>Machine washable (cold, gentle cycle)</li>
+              </ul>
+              <h4 style="margin-top:var(--space-6)">Care Instructions</h4>
+              <p>Machine wash cold on gentle cycle. Hang to dry. Iron on low heat. Do not bleach. Professional dry cleaning recommended for best results.</p>
+            </div>
+          </div>
+          <div class="tabs__panel" id="tab-specs">
+            <table class="specs-table">
+              <tr><td>Material</td><td>100% Italian Linen</td></tr>
+              <tr><td>Fit</td><td>Slim Fit</td></tr>
+              <tr><td>Closure</td><td>Two-Button</td></tr>
+              <tr><td>Lapel</td><td>Notch Lapel</td></tr>
+              <tr><td>Lining</td><td>Half-lined (Viscose)</td></tr>
+              <tr><td>Pockets</td><td>3 External, 2 Internal</td></tr>
+              <tr><td>Vent</td><td>Single Vent</td></tr>
+              <tr><td>Season</td><td>Spring / Summer / Fall</td></tr>
+              <tr><td>Weight</td><td>380g (Size M)</td></tr>
+              <tr><td>Origin</td><td>Made in Italy</td></tr>
+            </table>
+          </div>
+          <div class="tabs__panel" id="tab-reviews">
+            <div class="reviews-summary">
+              <div class="reviews-summary__avg">
+                <div class="reviews-summary__score">4.5</div>
+                <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div>
+                <p class="reviews-summary__total">Based on 128 reviews</p>
+              </div>
+              <div class="reviews-summary__bars">
+                <div class="rating-bar"><span class="rating-bar__label">5 stars</span><div class="rating-bar__track"><div class="rating-bar__fill" style="width:65%"></div></div><span class="rating-bar__count">83</span></div>
+                <div class="rating-bar"><span class="rating-bar__label">4 stars</span><div class="rating-bar__track"><div class="rating-bar__fill" style="width:20%"></div></div><span class="rating-bar__count">26</span></div>
+                <div class="rating-bar"><span class="rating-bar__label">3 stars</span><div class="rating-bar__track"><div class="rating-bar__fill" style="width:10%"></div></div><span class="rating-bar__count">13</span></div>
+                <div class="rating-bar"><span class="rating-bar__label">2 stars</span><div class="rating-bar__track"><div class="rating-bar__fill" style="width:3%"></div></div><span class="rating-bar__count">4</span></div>
+                <div class="rating-bar"><span class="rating-bar__label">1 star</span><div class="rating-bar__track"><div class="rating-bar__fill" style="width:1%"></div></div><span class="rating-bar__count">2</span></div>
+              </div>
+            </div>
+
+            <div class="review-item">
+              <div class="review-item__header">
+                <div class="review-item__avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=60" alt="Sarah J."></div>
+                <div><p class="review-item__name">Sarah Johnson</p><p class="review-item__date">March 15, 2026</p></div>
+                <span class="review-item__verified"><i class="ri-verified-badge-fill"></i> Verified</span>
+              </div>
+              <div class="review-item__stars stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+              <h5 class="review-item__title">Absolutely Stunning Quality</h5>
+              <p class="review-item__text">This blazer exceeded my expectations. The linen is incredibly soft, the fit is perfect, and it looks much more expensive than it is. I've received so many compliments. Highly recommend!</p>
+              <div class="review-item__helpful"><span>Was this helpful?</span><button><i class="ri-thumb-up-line"></i> 24</button><button><i class="ri-thumb-down-line"></i> 1</button></div>
+            </div>
+            <div class="review-item">
+              <div class="review-item__header">
+                <div class="review-item__avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=60" alt="Michael C."></div>
+                <div><p class="review-item__name">Michael Chen</p><p class="review-item__date">February 28, 2026</p></div>
+                <span class="review-item__verified"><i class="ri-verified-badge-fill"></i> Verified</span>
+              </div>
+              <div class="review-item__stars stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div>
+              <h5 class="review-item__title">Great Blazer, Runs Slightly Large</h5>
+              <p class="review-item__text">Beautiful construction and the color is spot-on. I normally wear an L but the M fits perfectly with this slim cut. Consider sizing down if you're between sizes. Very pleased overall.</p>
+              <div class="review-item__helpful"><span>Was this helpful?</span><button><i class="ri-thumb-up-line"></i> 18</button><button><i class="ri-thumb-down-line"></i> 0</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section section--bg related-products">
+      <div class="container">
+        <div class="flex justify-between items-end mb-10">
+          <div><span class="section__subtitle" style="text-align:left">You May Also Like</span><h2 class="section__title" style="text-align:left">Related Products</h2></div>
+          <div class="slider-nav"><button class="slider-nav__btn related-prev"><i class="ri-arrow-left-s-line"></i></button><button class="slider-nav__btn related-next"><i class="ri-arrow-right-s-line"></i></button></div>
+        </div>
+        <div class="swiper related-slider"><div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80" alt="Chinos" class="product-card__img"><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Tailored Slim Chinos — Navy</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(56)</span></div><div class="product-card__price"><span class="product-card__current-price">$89.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a7a?w=500&q=80" alt="Denim Jacket" class="product-card__img"><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Vintage Denim Jacket</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(98)</span></div><div class="product-card__price"><span class="product-card__current-price">$135.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&q=80" alt="Leather Jacket" class="product-card__img"><div class="product-card__badges"><span class="product-card__badge badge--sale">-25%</span></div><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Classic Leather Jacket</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(289)</span></div><div class="product-card__price"><span class="product-card__current-price">$299.00</span><span class="product-card__original-price">$399.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=500&q=80" alt="Watch" class="product-card__img"><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Accessories</p><a href="product.html" class="product-card__title">Designer Watch — Gold</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(312)</span></div><div class="product-card__price"><span class="product-card__current-price">$349.00</span></div></div></div></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="section recently-viewed">
+      <div class="container">
+        <h3 class="section__title mb-6" style="font-size:var(--fs-2xl)">Recently Viewed</h3>
+        <div class="swiper recently-viewed-slider"><div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&q=60" alt="Sneakers" class="product-card__img"></div><div class="product-card__info"><a href="product.html" class="product-card__title">Leather Sneakers</a><div class="product-card__price"><span class="product-card__current-price">$129.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=400&q=60" alt="Scarf" class="product-card__img"></div><div class="product-card__info"><a href="product.html" class="product-card__title">Cashmere Scarf</a><div class="product-card__price"><span class="product-card__current-price">$78.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=400&q=60" alt="Bag" class="product-card__img"></div><div class="product-card__info"><a href="product.html" class="product-card__title">Leather Tote</a><div class="product-card__price"><span class="product-card__current-price">$198.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=60" alt="Shoes" class="product-card__img"></div><div class="product-card__info"><a href="product.html" class="product-card__title">Running Shoes</a><div class="product-card__price"><span class="product-card__current-price">$109.00</span></div></div></div></div>
+          <div class="swiper-slide"><div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=60" alt="Dress" class="product-card__img"></div><div class="product-card__info"><a href="product.html" class="product-card__title">Summer Dress</a><div class="product-card__price"><span class="product-card__current-price">$79.00</span></div></div></div></div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer"><div class="footer__main"><div class="container"><div class="footer__grid">
+    <div class="footer__col"><a href="index.html" class="header__logo" style="color:#fff;margin-bottom:var(--space-4);display:inline-block;">LU<span>X</span>E</a><p class="footer__brand-desc">Premium fashion and lifestyle store.</p><div class="footer__social"><a href="#" class="footer__social-link"><i class="ri-facebook-fill"></i></a><a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a><a href="#" class="footer__social-link"><i class="ri-twitter-x-fill"></i></a></div></div>
+    <div class="footer__col"><h4 class="footer__heading">Quick Links</h4><div class="footer__links"><a href="shop.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Shop</a><a href="about.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> About</a><a href="contact.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Contact</a><a href="faq.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> FAQs</a></div></div>
+    <div class="footer__col"><h4 class="footer__heading">Support</h4><div class="footer__links"><a href="login.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Account</a><a href="cart.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Cart</a><a href="wishlist.html" class="footer__link"><i class="ri-arrow-right-s-line"></i> Wishlist</a></div></div>
+    <div class="footer__col"><h4 class="footer__heading">Newsletter</h4><p class="footer__newsletter-text">Get updates on new arrivals.</p><form class="footer__newsletter-form"><input type="email" class="footer__newsletter-input" placeholder="Your email"><button type="submit" class="footer__newsletter-btn">Join</button></form></div>
+  </div></div></div><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

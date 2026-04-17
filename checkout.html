@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure checkout at LUXE. Complete your purchase with confidence.">
+  <title>Checkout — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li></ul></nav><div class="header__actions"><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="cart.html" class="mobile-menu__link">Cart</a></nav></div>
+
+  <main style="padding-top: var(--header-height);">
+    <!-- Steps -->
+    <div class="container">
+      <div class="checkout-steps">
+        <div class="checkout-step active"><span class="checkout-step__number">1</span><span class="checkout-step__label">Shipping</span></div>
+        <div class="checkout-step__line"></div>
+        <div class="checkout-step"><span class="checkout-step__number">2</span><span class="checkout-step__label">Payment</span></div>
+        <div class="checkout-step__line"></div>
+        <div class="checkout-step"><span class="checkout-step__number">3</span><span class="checkout-step__label">Review</span></div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="checkout-layout">
+          <!-- Checkout Form -->
+          <div class="checkout-form" id="checkoutForm">
+            <!-- Billing -->
+            <div class="checkout-section">
+              <h2 class="checkout-section__title"><i class="ri-map-pin-line"></i> Billing Details</h2>
+              <div class="checkout-form__row">
+                <div class="form-group"><label class="form-label" for="firstName">First Name *</label><input type="text" class="form-input" id="firstName" required placeholder="John"></div>
+                <div class="form-group"><label class="form-label" for="lastName">Last Name *</label><input type="text" class="form-input" id="lastName" required placeholder="Doe"></div>
+              </div>
+              <div class="form-group"><label class="form-label" for="email">Email *</label><input type="email" class="form-input" id="email" required placeholder="john@example.com"><p class="form-error">Please enter a valid email</p></div>
+              <div class="form-group"><label class="form-label" for="phone">Phone *</label><input type="tel" class="form-input" id="phone" required placeholder="+1 (234) 567-890"></div>
+              <div class="form-group"><label class="form-label" for="address">Street Address *</label><input type="text" class="form-input" id="address" required placeholder="123 Fashion Street"></div>
+              <div class="checkout-form__row">
+                <div class="form-group"><label class="form-label" for="city">City *</label><input type="text" class="form-input" id="city" required placeholder="New York"></div>
+                <div class="form-group"><label class="form-label" for="state">State *</label><select class="form-select" id="state" required><option value="">Select state</option><option>New York</option><option>California</option><option>Texas</option><option>Florida</option><option>Other</option></select></div>
+              </div>
+              <div class="checkout-form__row">
+                <div class="form-group"><label class="form-label" for="zip">ZIP Code *</label><input type="text" class="form-input" id="zip" required placeholder="10001"></div>
+                <div class="form-group"><label class="form-label" for="country">Country *</label><select class="form-select" id="country" required><option value="">Select country</option><option selected>United States</option><option>Canada</option><option>United Kingdom</option><option>Australia</option></select></div>
+              </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="checkout-section">
+              <h2 class="checkout-section__title"><i class="ri-truck-line"></i> Shipping Address</h2>
+              <label class="form-check checkout-form__same-address"><input type="checkbox" id="sameAddress" checked> Same as billing address</label>
+              <div id="shippingFields" style="display:none;">
+                <div class="form-group"><label class="form-label">Address</label><input type="text" class="form-input" placeholder="123 Shipping St"></div>
+                <div class="checkout-form__row">
+                  <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input"></div>
+                  <div class="form-group"><label class="form-label">ZIP Code</label><input type="text" class="form-input"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="checkout-section">
+              <h2 class="checkout-section__title"><i class="ri-bank-card-line"></i> Payment Method</h2>
+              <div class="payment-methods">
+                <label class="payment-method active">
+                  <input type="radio" name="payment" value="card" checked>
+                  <i class="ri-bank-card-line payment-method__icon"></i>
+                  <div class="payment-method__info"><p class="payment-method__name">Credit / Debit Card</p><p class="payment-method__desc">Visa, Mastercard, AMEX</p></div>
+                </label>
+                <label class="payment-method">
+                  <input type="radio" name="payment" value="paypal">
+                  <i class="ri-paypal-line payment-method__icon"></i>
+                  <div class="payment-method__info"><p class="payment-method__name">PayPal</p><p class="payment-method__desc">Pay securely with PayPal</p></div>
+                </label>
+                <label class="payment-method">
+                  <input type="radio" name="payment" value="cod">
+                  <i class="ri-money-dollar-box-line payment-method__icon"></i>
+                  <div class="payment-method__info"><p class="payment-method__name">Cash on Delivery</p><p class="payment-method__desc">Pay when you receive</p></div>
+                </label>
+              </div>
+              <div class="payment-details active" id="card-details">
+                <div class="form-group"><label class="form-label">Card Number</label><input type="text" class="form-input" placeholder="1234 5678 9012 3456"></div>
+                <div class="checkout-form__row">
+                  <div class="form-group"><label class="form-label">Expiry Date</label><input type="text" class="form-input" placeholder="MM/YY"></div>
+                  <div class="form-group"><label class="form-label">CVV</label><input type="text" class="form-input" placeholder="123"></div>
+                </div>
+                <div class="form-group"><label class="form-label">Name on Card</label><input type="text" class="form-input" placeholder="John Doe"></div>
+              </div>
+            </div>
+
+            <button class="btn btn--accent btn--lg btn--full" id="placeOrder"><i class="ri-lock-line"></i> Place Order — $474.00</button>
+
+            <div class="checkout-trust">
+              <div class="trust-badge"><i class="ri-shield-check-fill"></i> SSL Encrypted</div>
+              <div class="trust-badge"><i class="ri-lock-fill"></i> Secure Payment</div>
+              <div class="trust-badge"><i class="ri-refresh-line"></i> Easy Returns</div>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h3 class="order-summary__title">Order Summary</h3>
+            <div class="order-summary__items">
+              <div class="order-summary__item">
+                <div class="order-summary__item-img"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=120&q=60" alt="Blazer"><span class="order-summary__item-qty">1</span></div>
+                <div class="order-summary__item-info"><p class="order-summary__item-name">Premium Linen Blazer</p><p class="order-summary__item-variant">Navy / M</p></div>
+                <span class="order-summary__item-price">$189.00</span>
+              </div>
+              <div class="order-summary__item">
+                <div class="order-summary__item-img"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=120&q=60" alt="Sneakers"><span class="order-summary__item-qty">1</span></div>
+                <div class="order-summary__item-info"><p class="order-summary__item-name">Leather Sneakers</p><p class="order-summary__item-variant">White / 42</p></div>
+                <span class="order-summary__item-price">$129.00</span>
+              </div>
+              <div class="order-summary__item">
+                <div class="order-summary__item-img"><img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=120&q=60" alt="Scarf"><span class="order-summary__item-qty">2</span></div>
+                <div class="order-summary__item-info"><p class="order-summary__item-name">Cashmere Scarf</p><p class="order-summary__item-variant">Camel</p></div>
+                <span class="order-summary__item-price">$156.00</span>
+              </div>
+            </div>
+            <div class="cart-summary__lines">
+              <div class="cart-summary__line"><span class="cart-summary__line-label">Subtotal</span><span class="cart-summary__line-value">$474.00</span></div>
+              <div class="cart-summary__line"><span class="cart-summary__line-label">Shipping</span><span class="cart-summary__line-value text-success">Free</span></div>
+              <div class="cart-summary__line"><span class="cart-summary__line-label">Tax</span><span class="cart-summary__line-value">$0.00</span></div>
+            </div>
+            <div class="cart-summary__total"><span class="cart-summary__total-label">Total</span><span class="cart-summary__total-value">$474.00</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Order Success Modal -->
+  <div class="modal-overlay" id="orderSuccessModal">
+    <div class="modal">
+      <div class="order-success">
+        <div class="order-success__icon"><i class="ri-check-line"></i></div>
+        <h3 class="order-success__title">Order Confirmed!</h3>
+        <p class="order-success__message">Thank you for shopping with LUXE. Your order has been placed successfully.</p>
+        <p class="order-success__order-id">Order #LX-2026-04178</p>
+        <div class="order-success__btns">
+          <a href="index.html" class="btn btn--accent">Continue Shopping</a>
+          <a href="login.html" class="btn btn--outline">Track Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

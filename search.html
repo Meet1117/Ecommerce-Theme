@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search LUXE — find what you're looking for from our curated collection of premium fashion.">
+  <title>Search Results — LUXE Store</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader__inner"><div class="preloader__logo">LUXE</div><div class="preloader__bar"></div></div></div>
+  <header class="header header--solid" id="header"><div class="header__inner"><a href="index.html" class="header__logo">LU<span>X</span>E</a><nav class="nav"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Home</a></li><li class="nav__item"><a href="shop.html" class="nav__link">Shop</a></li><li class="nav__item"><a href="offers.html" class="nav__link">Offers</a></li><li class="nav__item"><a href="about.html" class="nav__link">About</a></li><li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li></ul></nav><div class="header__actions"><a href="wishlist.html" class="header__action"><i class="ri-heart-line"></i><span class="header__badge" id="wishlistCount">2</span></a><a href="cart.html" class="header__action"><i class="ri-shopping-bag-line"></i><span class="header__badge" id="cartCount">3</span></a><a href="login.html" class="header__action"><i class="ri-user-line"></i></a><button class="header__menu-toggle" id="mobileMenuToggle"><i class="ri-menu-line"></i></button></div></div></header>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-menu__header"><span class="mobile-menu__logo">LU<span>X</span>E</span><button class="mobile-menu__close" id="mobileMenuClose"><i class="ri-close-line"></i></button></div><nav class="mobile-menu__nav"><a href="index.html" class="mobile-menu__link">Home</a><a href="shop.html" class="mobile-menu__link">Shop</a><a href="about.html" class="mobile-menu__link">About</a><a href="contact.html" class="mobile-menu__link">Contact</a></nav></div>
+
+  <main style="padding-top:var(--header-height);">
+    <section class="section">
+      <div class="container">
+        <!-- Search Bar -->
+        <div class="search-page__bar">
+          <input type="text" class="search-page__input" placeholder="Search for products, categories, brands..." value="Linen" autocomplete="off">
+          <button class="search-page__btn"><i class="ri-search-line"></i></button>
+          <div class="search-autosuggest"></div>
+        </div>
+        <p class="search-page__meta">Showing <span>4 results</span> for "<span>Linen</span>"</p>
+
+        <!-- Results Grid -->
+        <div class="product-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&q=80" alt="Linen Blazer" class="product-card__img"><div class="product-card__badges"><span class="product-card__badge badge--best">Best Seller</span></div><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Premium <strong>Linen</strong> Blazer — Slim Fit</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i></div><span class="product-card__review-count">(128)</span></div><div class="product-card__price"><span class="product-card__current-price">$189.00</span><span class="product-card__original-price">$249.00</span></div></div></div>
+          <div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=500&q=80" alt="Linen Pants" class="product-card__img"><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Men's Clothing</p><a href="product.html" class="product-card__title">Relaxed <strong>Linen</strong> Trousers — Navy</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div><span class="product-card__review-count">(56)</span></div><div class="product-card__price"><span class="product-card__current-price">$89.00</span></div></div></div>
+          <div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="Linen Dress" class="product-card__img"><div class="product-card__badges"><span class="product-card__badge badge--new">New</span></div><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Women's Clothing</p><a href="product.html" class="product-card__title">Summer <strong>Linen</strong> Maxi Dress</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div><span class="product-card__review-count">(42)</span></div><div class="product-card__price"><span class="product-card__current-price">$139.00</span></div></div></div>
+          <div class="product-card"><div class="product-card__image"><img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=500&q=80" alt="Linen Scarf" class="product-card__img"><div class="product-card__actions"><button class="product-card__action-btn" title="Wishlist"><i class="ri-heart-line"></i></button><button class="product-card__action-btn" title="Quick View"><i class="ri-eye-line"></i></button></div><div class="product-card__quick-add"><button class="product-card__add-btn"><i class="ri-shopping-bag-line"></i> Add to Cart</button></div></div><div class="product-card__info"><p class="product-card__category">Accessories</p><a href="product.html" class="product-card__title">Lightweight <strong>Linen</strong> Scarf</a><div class="product-card__rating"><div class="product-card__stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line empty"></i></div><span class="product-card__review-count">(31)</span></div><div class="product-card__price"><span class="product-card__current-price">$45.00</span></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__bottom"><div class="container"><div class="footer__bottom-inner"><p class="footer__copyright">&copy; 2026 LUXE. All rights reserved.</p><div class="footer__payments"><div class="footer__payment-icon">VISA</div><div class="footer__payment-icon">MC</div><div class="footer__payment-icon">AMEX</div><div class="footer__payment-icon">PP</div></div></div></div></div></footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="back-to-top" id="backToTop"><i class="ri-arrow-up-line"></i></button>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>
